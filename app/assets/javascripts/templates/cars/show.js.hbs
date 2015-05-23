@@ -1,0 +1,41 @@
+<div id="cars-show" class="panel">
+  <h1>Car</h1>
+  <form {{action 'save' model on="submit"}}>
+    <div class="row">
+      <div class="small-3 columns">
+        <label for="make" class="right inline required">Make</label>
+       </div>
+       <div class="small-9 columns">
+         {{input id="make" type="text" required="" value=make}}
+       </div>
+     </div>
+     <div class="row">
+       <div class="small-3 columns">
+         <label for="model" class="right inline required">Model</label>
+       </div>
+       <div class="small-9 columns">
+         {{input id="model" type="text" required="" value=model.model}}
+       </div>
+     </div>
+     <div class="row">
+       <div class="small-3 columns">
+         <label for="color" class="right inline required">Color</label>
+       </div>
+       <div class="small-9 columns">
+         {{input id="color" type="text" required="" value=color}}
+       </div>
+     </div>
+     <div class="row">
+       <div class="small-3 columns">
+         <label for="condition" class="right inline required">Condition</label>
+       </div>
+       <div class="small-9 columns">
+         {{input id="condition" type="text" required="" value=condition}}
+       </div>
+     </div>
+     <div class="actions">
+       <button type="submit" class="button success">Save</button>
+       {{#link-to 'cars.index' class='button alert' }} Cancel {{/link-to}}
+     </div>
+  </form>
+</div>
