@@ -3,3 +3,5 @@
 this is simple app that allow CRUD operations
 builded with Ember.js and Ruby on Rails
 inspired by this tutorial https://www.barnesian.com/getting-started-with-ember-js-part-1-project-setup/
+
+Now i test git rebase function
