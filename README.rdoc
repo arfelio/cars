@@ -3,3 +3,43 @@
 this is simple app that allow CRUD operations
 builded with Ember.js and Ruby on Rails
 inspired by this tutorial https://www.barnesian.com/getting-started-with-ember-js-part-1-project-setup/
+
+
+How to squash commits? 
+How can I rebase to the latest master?
+How to force push into your branch?
+How to squash commits?
+We need to keep commit history simple and clear, so it is necessary that you squash all your changes into a single commit before submitting a pull request.
+
+To squash the last 3 commits into one:
+
+
+git reset --soft HEAD~3
+
+git commit -m "New Commit Message"
+
+Tutorials
+
+Squashing Commits with Rebase http://gitready.com/advanced/2009/02/10/squashing-commits-with-rebase.html
+
+Squashing Git Commits https://gist.github.com/patik/b8a9dc5cd356f9f6f980
+
+Squash Several Git Commits Into a Single Commit http://makandracards.com/makandra/527-squash-several-git-commits-into-a-single-commit
+
+How to squash multiple git commits (video) https://egghead.io/lessons/javascript-how-to-squash-multiple-git-commits
+
+How can I rebase to the latest master?
+You can watch this video https://egghead.io/lessons/javascript-how-to-rebase-a-git-pull-request-branch, or execute these commands in your local feature branch:
+
+
+${YOUR_BRANCH} $ git fetch
+
+${YOUR_BRANCH} $ git rebase origin/master
+This will rebase your local feature branches to include changes from the latest master.
+
+How to force push into your branch?
+If you have already pushed your changes into remote, you can not push your new change if you just did squashing or rebased from master as your git history is changed. You will have to force push to remote and override remote git history in your branch.
+
+
+git push --force-with-lease
+Note that this should only be done in your own branch.
