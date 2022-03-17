@@ -43,3 +43,19 @@ If you have already pushed your changes into remote, you can not push your new c
 
 git push --force-with-lease
 Note that this should only be done in your own branch.
+
+
+
+SELECT count(orders.id)
+FROM orders
+
+
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM order_items 
+    WHERE 
+        orders.id = order_items.order_id
+         
+        AND order_items.state != 'miss'
+)
+
